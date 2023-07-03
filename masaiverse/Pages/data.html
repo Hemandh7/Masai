@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Page</title>
+  <link rel="stylesheet" href="../CSS/data.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../CSS/admin.css"> -->
+  <script src="../Scripts/data.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="navbar">
+      <a href="./login.html">Login</a>
+      <a id="data-link" href="./data.html">Data</a>
+      <a id="reports-link" href="./reports.html">Reports</a>
+      <button id="logout-button">Logout</button>
+    </div>
+  </header>
+  <h1>Data Page</h1>
+  <div id="filter-container">
+    <label>Sort By:</label>
+    <select id="sort-select">
+      <option value="age">Age</option>
+    </select>
+
+    <label for="filter-select">Filter By:</label>
+    <select id="filter-select">
+      <option value="">All</option>
+      <option value="FSD">FSD</option>
+      <option value="Frontend">Frontend</option>
+      <option value="Backend">Backend</option>
+      <option value="Student">Student</option>
+    </select>
+
+    <input type="text" id="search-input" placeholder="Search by Name">
+
+    <button id="search-btn">Search</button>
+  </div>
+  <div id="main">
+    <div id="users-container"></div>
+
+    <div id="pagination-container">
+      <button id="prev-page">Previous</button>
+      <span id="page-num"></span>
+      <button id="next-page">Next</button>
+    </div>
+
+    <div id="edit-form-container" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Edit User</h2>
+        <form id="edit-form">
+          <label>Name:</label>
+          <input type="text" id="edit-name" name="edit-name"><br>
+
+          <label>Age:</label>
+          <input type="number" id="edit-age" name="edit-age"><br>
+
+          <label>Place:</label>
+          <input type="text" id="edit-place" name="edit-place"><br>
+
+          <label>Batch Name:</label>
+          <input type="text" id="edit-batch" name="edit-batch"><br>
+
+          <label>Profession:</label>
+          <input type="text" id="edit-profession" name="edit-profession"><br>
+
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
